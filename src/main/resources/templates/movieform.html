@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Form</title>
+</head>
+<body>
+
+<h1>Movie Form</h1>
+
+<form action="#" th:action="@{/processMovie}" th:object="${movie}" method="post">
+    Movie name: <input type="text" th:field="*{name}" /><br />
+    Director: <input type="text" th:field="*{director}" /><br />
+    Rating: <input type="number" th:field="*{rating}" /><br />
+    Year: <input type="number" th:field="*{year}" /><br />
+    <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>
